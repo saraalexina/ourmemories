@@ -141,33 +141,6 @@ h1, h2, h3{
     background-color: var(--dark-color);
 }
 
-/* work */
-#work{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/work-pic.jpg') center/cover no-repeat fixed;
-    color: var(--light-color);
-}
-#work .title h2, #work h3{
-    color: var(--light-color);
-}
-#work .title h2::after{
-    background: var(--light-color);
-}
-.work-bottom{
-    margin-top: 4rem;
-    text-align: center;
-}
-.work-bottom > div .icon img{
-    width: 50px;
-    margin: 0 auto 1.7rem auto;
-}
-/* portfolio */
-.portfolio-grid > div{
-    transition: var(--transition);
-}
-.portfolio-grid > div:hover{
-    transform: scale(0.9);
-}
-
 /* contact */
 #contact{
     background-color: rgb(248, 248, 248);
@@ -222,7 +195,7 @@ h1, h2, h3{
     background-color: var(--light-color);
 }
 .insta-grid > div{
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     transition: var(--transition);
 }
