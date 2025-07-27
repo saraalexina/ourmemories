@@ -4,7 +4,7 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#FFFF00",
+  "theme_color": "#fac52b",
   "icons": [
     {
       "src": "images/solelua.png",
