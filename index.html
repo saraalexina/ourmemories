@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="images/solelua.png">
     <link rel="apple-touch-icon" href="images/solelua.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#FFFF00">
+    <meta name="theme-color" content="#fac52b">
     <title>Us💕</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -288,6 +288,45 @@
 
       setInterval(atualizarContagem, 1000);
       atualizarContagem(); // executa logo ao carregar
+
+        // Lista de mensagens
+        const mensagens = [
+        "Bom dia, meu amor! 💖",
+        "Você é a minha felicidade diária! 😍",
+        "Te amo mais do que a medida 🙈❤️",
+        "Que seu dia seja tão lindo quanto o seu sorriso 🌙🌸",
+        "Meu mundo é mais colorido com você 🌈",
+        ];
+
+        // Função para mostrar notificação estilizada
+        function mostrarNotificacao(mensagem) {
+        const notif = document.createElement("div");
+        notif.classList.add("notificacao");
+        notif.innerHTML = mensagem;
+
+        document.body.appendChild(notif);
+
+        // Mostrar com animação
+        setTimeout(() => {
+            notif.classList.add("show");
+        }, 100);
+
+        // Esconder e remover após 5 segundos
+        setTimeout(() => {
+            notif.classList.remove("show");
+            setTimeout(() => {
+            notif.remove();
+            }, 500);
+        }, 5000);
+        }
+
+        // Ao abrir a página, mostra mensagem do dia
+        window.onload = () => {
+        const hoje = new Date().getDay(); // 0 = Domingo, 1 = Segunda...
+        const mensagemHoje = mensagens[hoje % mensagens.length];
+        mostrarNotificacao(mensagemHoje);
+        };
+
     </script>
     <script src = "typewriting-master/typewriting.js"></script>
 </body>
